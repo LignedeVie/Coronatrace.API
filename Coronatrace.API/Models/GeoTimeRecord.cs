@@ -14,6 +14,8 @@ namespace Coronatrace.API.Models
         public Guid UserId { get; set; }
         public DateTime Time { get; set; }
         public Point Location { get; set; }
+        public double HorizontalAccuracy { get; set; }
+        public double VerticalAccuracy { get; set; }
         public bool IsVerified { get; set; }
         public DateTime VerifiedDateTime { get; internal set; }
     }

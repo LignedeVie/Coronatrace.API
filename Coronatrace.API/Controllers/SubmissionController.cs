@@ -32,7 +32,9 @@ namespace Coronatrace.API.Controllers
             var records = viewModels.Select(x => new GeoTimeRecord()
             {
                 UserId = guid,
-                Location = x.Location,
+                Location = new Point(x.Latitude, x.Longitude),
+                VerticalAccuracy = x.VerticalAccuracy,
+                HorizontalAccuracy = x.HorizontalAccuracy,
                 Time = x.Time,
                 IsVerified = false
             });

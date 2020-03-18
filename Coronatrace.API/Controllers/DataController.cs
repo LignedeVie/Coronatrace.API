@@ -28,7 +28,10 @@ namespace Coronatrace.API.Controllers
                 && x.VerifiedDateTime > lastCheckedDate)
                 .Select(x => new GeoTimeRecordViewModel()
                 {
-                    Location = x.Location,
+                    Latitude = x.Location.X,
+                    Longitude = x.Location.Y,
+                    HorizontalAccuracy = x.HorizontalAccuracy,
+                    VerticalAccuracy = x.VerticalAccuracy,
                     Time = x.Time
                 });
         }
