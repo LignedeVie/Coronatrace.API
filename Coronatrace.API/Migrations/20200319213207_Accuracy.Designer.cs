@@ -4,15 +4,17 @@ using Coronatrace.API;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NetTopologySuite.Geometries;
 
 namespace Coronatrace.API.Migrations
 {
     [DbContext(typeof(CoronatraceContext))]
-    partial class CoronatraceContextModelSnapshot : ModelSnapshot
+    [Migration("20200319213207_Accuracy")]
+    partial class Accuracy
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
